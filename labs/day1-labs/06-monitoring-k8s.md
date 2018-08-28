@@ -99,7 +99,8 @@ Use the EXTERNAL-IP value from the previous step and put that into your browser:
 2. Add Prometheus as a Data Source
     * If you recall from above, we exposed a number of K8s services, one of those services was the Prometheus Server. We are going to use that Service endpoint in our Data Service configuration. The Add Data Source screen should look something like the below screen shot.
 
-    > Use `http://gbbhackprometheus-prometheus-server:9090` for the URL in the HTTP settings.
+    > Use ```http://<PrometheusLoadBalancerIP>:9090``` for the URL in the HTTP settings. <br>
+    > **Note** Prometheus Load Lalancer IP is fetched from previous command ```kubectl get svc | grep prometheus```
 
     ![](img/8-grafana_datasource.png)
 
