@@ -46,6 +46,8 @@ There are a few ways that AKS clusters can access your private Azure Container R
 
 ```
 # set these values to yours
+# Fetch these values from within the container registry resource by clicking Access Keys
+
 ACR_SERVER=
 ACR_USER=
 ACR_PWD=
