@@ -9,19 +9,20 @@
 
 3. The first time Cloud Shell is started will require you to create a storage account. In our lab, you must click `Advanced` and enter an account name and share.
 
-4. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
+4. **Skip to Step 9 if you have already deployed the AKS cluster.**
+5. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
     ```
     git clone https://github.com/Azure/blackbelt-aks-hackfest.git
     ```
 
-5. In the cloud shell, you are automatically logged into your Azure subscription. ```az login``` is not required.
+6. In the cloud shell, you are automatically logged into your Azure subscription. ```az login``` is not required.
     
-6. Verify your subscription is correctly selected as the default
+7. Verify your subscription is correctly selected as the default
     ```
     az account list
     ```
 
-7. Find your RG name
+8. Find your RG name
 
     ```
     az group list 
@@ -57,7 +58,7 @@
     
     ```
 
-8. Create your AKS cluster in the resource group created above with 2 nodes, targeting Kubernetes version 1.7.7
+9. Create your AKS cluster in the resource group created above with 2 nodes, targeting Kubernetes version 1.7.7
     ```
     # This command can take 5-25 minutes to run as it is creating the AKS cluster. Please be PATIENT...
     
@@ -67,7 +68,7 @@
     az aks create -n $CLUSTER_NAME -g $NAME -c 2 -k 1.7.7 --generate-ssh-keys -l $LOCATION
     ```
 
-9. Verify your cluster status. The `ProvisioningState` should be `Succeeded`
+10. Verify your cluster status. The `ProvisioningState` should be `Succeeded`
     ```
     az aks list -o table
 
@@ -77,12 +78,12 @@
     ```
 
 
-10. Get the Kubernetes config files for your new AKS cluster
+11. Get the Kubernetes config files for your new AKS cluster
     ```
     az aks get-credentials -n $CLUSTER_NAME -g $NAME
     ```
 
-11. Verify you have API access to your new AKS cluster
+12. Verify you have API access to your new AKS cluster
 
     > Note: It can take 5 minutes for your nodes to appear and be in READY state. You can run `watch kubectl get nodes` to monitor status. 
     
