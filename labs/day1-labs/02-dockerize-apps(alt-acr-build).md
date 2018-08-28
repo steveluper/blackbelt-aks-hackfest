@@ -86,6 +86,8 @@ For the first container, we will be creating a Dockerfile from scratch. For the 
     From the cloudshell session: 
 
     ```
+    #Ignore the warnings
+    
     cd ~/blackbelt-aks-hackfest/app/web
     
     # Set environment variable for ACR Name
@@ -104,7 +106,7 @@ In this step, the Dockerfile has been created for you.
 
     ```
     #Ignore the warnings
-    
+
     cd ~/blackbelt-aks-hackfest/app/api
 
    az acr build --registry $ACR_NAME --image azureworkshop/rating-api:v1 .
@@ -119,6 +121,8 @@ In this step, the Dockerfile has been created for you.
 1. Create a MongoDB image with data files
 
     ```
+    #Ignore the warnings
+
     cd ~/blackbelt-aks-hackfest/app/db
 
     az acr build --registry $ACR_NAME --image azureworkshop/rating-db:v1 .
