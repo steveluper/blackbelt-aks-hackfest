@@ -52,10 +52,10 @@ The API for the app is written in javascript, running on [Node.js](https://nodej
     ```bash
     cd ~/blackbelt-aks-hackfest/app/api
 
-    npm install && npm run localmachine
+    npm install && npm run localmachine &
     ```
 
-2. Open a new terminal session on the jumpbox and test the API
+2. On the jumpbox and test the API
 
     use curl
     ```bash
@@ -73,11 +73,11 @@ The web frontend for the app is written in [Vue.js](https://vuejs.org/Vue "Vue.j
     ```bash
     cd ~/blackbelt-aks-hackfest/app/web
 
-    npm install && npm run localmachine
+    npm install && npm run localmachine &
     ```
 3. Test the web front-end
 
-    The jumpbox has an external DNS name and port 8080 is open. You can browse your running app with a link such as: http://jump-vm-csc4f653357f-q72zm5c4ggcza.eastus.cloudapp.azure.com:8080 
+    The jumpbox has an external DNS name and port **8080** is not open by default. Edit the **allow-app-endpoints** NSG to allow traffic on port **8080** instead of **3000-3010** You can browse your running app with a link such as: http://jump-vm-csc4f653357f-q72zm5c4ggcza.eastus.cloudapp.azure.com:8080 
 
     You can also test from a new terminal session in the jumpbox
     ```bash
