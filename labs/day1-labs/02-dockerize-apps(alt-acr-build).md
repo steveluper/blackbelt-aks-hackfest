@@ -103,6 +103,8 @@ In this step, the Dockerfile has been created for you.
 1. Create a container image for the node.js API app
 
     ```
+    #Ignore the warnings
+    
     cd ~/blackbelt-aks-hackfest/app/api
 
    az acr build --registry $ACR_NAME --image azureworkshop/rating-api:v1 .
