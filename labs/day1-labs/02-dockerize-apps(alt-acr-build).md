@@ -7,36 +7,31 @@ We will use Azure COntainer Registry to build our containers from Dockerfiles an
 ### Create Azure Container Registry instance
 
 1. In the browser, sign in to the Azure portal at https://portal.azure.com. Your Azure login ID will look something like `odl_user_9294@gbbossteamoutlook.onmicrosoft.com`
-2. Click "Create a resource" and select "Container Registry"
-3. Provide a name for your registry (this must be unique)
-4. Use the existing Resource Group
-5. Enable the Admin user
-6. Use the 'Standard' SKU (default)
-
-    > The Standard registry offers the same capabilities as Basic, but with increased storage limits and image throughput. Standard registries should satisfy the needs of most production scenarios.
-
-1. Open the Azure Cloud Shell
+2. Click **Resource Groups** and select **fabmedical-sol**
+3. Select the registry that was created earlier **fabmedicalregistryv1**
+4. Use the existing Resource Group **fabmedical-sol**
+5. Open the Azure Cloud Shell
 
     ![Azure Cloud Shell](img/cloudshell.png "Azure Cloud Shell")
 
-2. The first time Cloud Shell is started will require you to create a storage account. In our lab, you must click `Advanced` and enter an account name and share.
+6. The first time Cloud Shell is started will require you to create a storage account. In our lab, you must click `Advanced` and enter an account name and share.
 
-3. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
+7. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
     ```
     git clone https://github.com/Azure/blackbelt-aks-hackfest.git
     ```
 
-4. In the cloud shell, you are automatically logged into your Azure subscription. ```az login``` is not required.
+8. In the cloud shell, you are automatically logged into your Azure subscription. ```az login``` is not required.
     
-5. Verify your subscription is correctly selected as the default
+9. Verify your subscription is correctly selected as the default
     ```
     az account list
     ```
 
-6. Find your RG name
+10. Find your RG name
 
     ```
-    az group list 
+    az group list --output table
     ```
     
     ```
