@@ -16,7 +16,8 @@ There are multiple ways of accessing Kubernetes dashboard. You can access it thr
     * Fetch the resourceGroup and AKS cluster name by running ```az aks list -o table```
     * Run ```NAME=<YourResourceGroupName>``` to set the variable **NAME**
     * Run ```CLUSTER_NAME=<YourClusterName>``` to set the variable **CLUSTER_NAME**
-    * Run ```az aks browse -n $CLUSTER_NAME -g $NAME``` to open the Kubernetes Dashboard UI in a web browser (Firefox is pre-installed on the Jumpbox)
+    * Run ```az aks browse -n $CLUSTER_NAME -g $NAME```
+    * Open browser and navigate to url ```http://127.0.0.1:8001/```
 
 ### Explore Kubernetes Dashboard
 
