@@ -20,6 +20,7 @@ Once you have accessed the jumpbox, you must clone the workshop repo to the mach
 2. Clone the Github repo via the command line
 
     ```
+    cd ~
     git clone https://github.com/Azure/blackbelt-aks-hackfest.git
     ```
 
@@ -32,9 +33,14 @@ The underlying data store for the app is [MongoDB](https://www.mongodb.com/ "Mon
 1. Import the data using a terminal session on the jumpbox
 
     ```bash
+    # From the previous lab run the following command to change the mongoDB port
+    docker run --name mongo --net fabmedical -p 27019:27017 -d mongo
+
     cd ~/blackbelt-aks-hackfest/app/db
 
-    mongoimport --host localhost:27019 --db webratings --collection heroes --file ./heroes.json --jsonArray && mongoimport --host localhost:27019 --db webratings --collection ratings --file ./ratings.json --jsonArray && mongoimport --host localhost:27019 --db webratings --collection sites --file ./sites.json --jsonArray
+    mongoimport --host localhost:27019 --db webratings --collection heroes --file ./heroes.json --jsonArray && \
+    mongoimport --host localhost:27019 --db webratings --collection ratings --file ./ratings.json --jsonArray && \
+    mongoimport --host localhost:27019 --db webratings --collection sites --file ./sites.json --jsonArray
     ```
 
 ### API Application layer - Node.js
