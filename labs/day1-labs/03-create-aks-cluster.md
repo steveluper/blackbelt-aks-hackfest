@@ -9,7 +9,7 @@
 
 3. The first time Cloud Shell is started will require you to create a storage account. In our lab, you must click `Advanced` and enter an account name and share.
 
-4. **Skip to Step 9 if you have already deployed the AKS cluster.**
+4. **Skip to Step 10 if you have already deployed the AKS cluster.**
 5. Once your cloud shell is started, clone the workshop repo into the cloud shell environment
     ```
     git clone https://github.com/Azure/blackbelt-aks-hackfest.git
@@ -80,7 +80,7 @@
 
 11. Get the Kubernetes config files for your new AKS cluster
     ```
-    az aks get-credentials -n $CLUSTER_NAME -g $NAME
+    az aks get-credentials -n <Your_CLUSTER_NAME> -g <YourResourceNAME>
     ```
 
 12. Verify you have API access to your new AKS cluster
