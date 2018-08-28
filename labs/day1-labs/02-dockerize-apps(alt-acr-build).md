@@ -35,24 +35,13 @@ We will use Azure COntainer Registry to build our containers from Dockerfiles an
     ```
     
     ```
-
-    [
-    {
-        "id": "/subscriptions/b23accae-e655-44e6-a08d-85fb5f1bb854/resourceGroups/ODL-aks-v2-gbb-8386",
-        "location": "centralus",
-        "managedBy": null,
-        "name": "ODL-aks-v2-gbb-8386",
-        "properties": {
-        "provisioningState": "Succeeded"
-        },
-        "tags": {
-        "AttendeeId": "8391",
-        "LaunchId": "486",
-        "LaunchType": "ODL",
-        "TemplateId": "1153"
-        }
-    }
-    ]
+    Name                                     Location    Status
+    ---------------------------------------  ----------  ---------
+    cloud-shell-storage-westus               westus      Succeeded
+    DefaultResourceGroup-EUS                 eastus      Succeeded
+    fabmedical-sol                           eastus      Succeeded
+    jenkins                                  eastus      Succeeded
+    MC_fabmedical-sol_fabmedical-k8s_eastus  eastus      Succeeded
 
     # copy the name from the results above and set to a variable 
     
@@ -94,7 +83,7 @@ For the first container, we will be creating a Dockerfile from scratch. For the 
 
 2. Create a container image for the node.js Web app
 
-    From the terminal session: 
+    From the cloudshell session: 
 
     ```
     cd ~/blackbelt-aks-hackfest/app/web
