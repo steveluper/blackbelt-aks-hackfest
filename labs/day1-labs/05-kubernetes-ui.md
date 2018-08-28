@@ -11,6 +11,7 @@ There are multiple ways of accessing Kubernetes dashboard. You can access it thr
 1. Command-Line using the Azure CLI
 
     * Open an RDP session to the jumpbox IP with username and password
+    * Open up a local ubuntu terminal prompt
     * Run ```az login``` to authenticate with Azure in order to use Azure CLI in the Jumpbox instead of Cloud Shell
     * Run ```NAME=$(az group list -o table | grep ODL | awk '{print $1}')``` in order to retrieve the name of the resource group for your Azure account and put it in the NAME variable.
     * Run ```CLUSTER_NAME="${NAME//_}"``` in order to retrieve the cluster name (to remove the underscore)
