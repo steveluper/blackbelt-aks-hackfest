@@ -73,7 +73,7 @@ kubectl create secret docker-registry acr-secret --docker-server=$ACR_SERVER --d
     NAME                                 READY     STATUS    RESTARTS   AGE
     heroes-db-deploy-2357291595-k7wjk    1/1       Running   0          3m
 
-    MONGO_POD=heroes-db-deploy-2357291595-k7wjk
+    MONGO_POD=<Your Pod Name>
     ```
 
 * Import data into MongoDB using script
